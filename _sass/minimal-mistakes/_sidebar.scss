@@ -128,9 +128,10 @@
   height: 36px;
 
   @include breakpoint($large) {
-    display: block;
-    width: auto;
-    height: auto;
+    display: table-cell;
+    vertical-align: top;
+    width: 36px;
+    height: 36px;
   }
 
   img {
@@ -152,10 +153,11 @@
   line-height: 1;
 
   @include breakpoint($large) {
-    display: block;
-    width: 100%;
-    padding-left: 0;
-    padding-right: 0;
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 15px;
+    padding-right: 25px;
+    line-height: 1;
   }
 
   a {
@@ -206,9 +208,6 @@
     }
   }
 
-  @include breakpoint($large) {
-    display: block;
-  }
 
   button {
     position: relative;
@@ -231,10 +230,6 @@
         pointer-events: auto;
       }
     }
-
-    @include breakpoint($large) {
-      display: none;
-    }
   }
 }
 
@@ -255,15 +250,7 @@
     display: block;
   }
 
-  @include breakpoint($large) {
-    display: block;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    box-shadow: none;
-  }
+
 
   &:before {
     display: block;
@@ -276,10 +263,6 @@
     border-width: 0 10px 10px;
     border-color: $border-color transparent;
     z-index: 0;
-
-    @include breakpoint($large) {
-      display: none;
-    }
   }
 
   &:after {
@@ -293,10 +276,6 @@
     border-width: 0 10px 10px;
     border-color: $background-color transparent;
     z-index: 1;
-
-    @include breakpoint($large) {
-      display: none;
-    }
   }
 
   ul {
