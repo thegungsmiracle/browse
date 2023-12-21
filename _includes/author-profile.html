@@ -2,31 +2,27 @@
 {% assign author = site.data.authors[author] | default: author %}
 <link rel="stylesheet" type="text/css" href="stylelish.css">
 
-<style>
-  body {
-  background: #eee;
-  font-family: sans-serif;
-}
+  <style>
 
-.dropdown-container {
-  background: white;
-  padding: 1rem;
-  max-width: 200px;
-}
+  .dropdown-container {
+    background: black;
+    padding: 1rem;
+    max-width: 200px;
+  }
+  
+  label {
+    cursor: pointer;
+  }
 
-label {
-  cursor: pointer;
-}
+  #dropdown-toggle {
+    display: none;
+  }
 
-#dropdown-toggle {
-  display: none;
-}
+  #dropdown-toggle:checked ~ .dropdown-content {
+      display: block;
+  }
 
-#dropdown-toggle:checked ~ .dropdown-content {
-    display: block;
-}
-
-.dropdown-content {
+  .dropdown-content {
   list-style: none;
   padding: 0;
   display: none;
@@ -67,6 +63,7 @@ label {
     <li><a href="#">Four</a></li>
   </ul>
 </div>
+
   
   {% if author.avatar %}
     <div class="author__avatar">
