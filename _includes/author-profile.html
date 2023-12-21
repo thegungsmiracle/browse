@@ -2,68 +2,22 @@
 {% assign author = site.data.authors[author] | default: author %}
 <link rel="stylesheet" type="text/css" href="stylelish.css">
 
-<style>
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
 
-  .dropdown-container {
-    background: black;
-    padding: 1rem;
-    max-width: 200px;
-  }
-  
-  label {
-    cursor: pointer;
-  }
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">메뉴</button>
+    <ul class="author__urls social-icons">
+      {% if author.location %}
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="false"></i> <span itemprop="name" class="p-locality">{{ author.location }}</span>
+        </li>
+      {% endif %}
 
-  #dropdown-toggle {
-    display: none;
-  }
-
-  #dropdown-toggle:checked ~ .dropdown-content {
-      display: block;
-  }
-
-  .dropdown-content {
-  list-style: none;
-  padding: 0;
-  display: none;
-  margin: 15px 0 0;
-}
-
-.dropdown-content li {
-  padding: 0.5rem 0;  
-  border-bottom: 1px solid #eee;
-}
-
-.dropdown-content li:last-child {
-  border-bottom: 0;
-}
-
-.dropdown-content a {
-  text-decoration: none;
-  color: #444;
-  font-weight: bold;
-  position: relative;
-  paddin-left: 0px;
-  display: block;
-  transition: 0.2s linear;
-}
-
-.dropdown-content a:hover {
-  padding-left: 5px;
-  color: red;
-}
-</style>
-<div class="dropdown-container">
-  <input type="checkbox" id="dropdown-toggle">
-  <label for="dropdown-toggle">Dropdown</label>
-  <ul class=dropdown-content>
-    <li><a href="#">One</a></li>
-    <li><a href="#">Two</a></li>
-    <li><a href="#">Three</a></li>
-    <li><a href="#">Four</a></li>
-  </ul>
-</div>
-
+      <button class="btn btn--inverse">hello</button>
+      
+      {% include author-profile-custom-links.html %}
+    </ul>
+  </div>
   
   {% if author.avatar %}
     <div class="author__avatar">
