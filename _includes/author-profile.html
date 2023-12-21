@@ -3,19 +3,22 @@
 <link rel="stylesheet" type="text/css" href="stylelish.css">
 
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
-  <nav role='navigation'>
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a>
-      <ul>
-        <li><a href="">Our team</a></li>
-        <li><a href="">History</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Clients</a></li>
-    <li><a href="#">Contact Us</a></li>
-  </ul>
-</nav>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">메뉴</button>
+    <ul class="author__urls social-icons">
+      {% if author.location %}
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">{{ author.location }}</span>
+        </li>
+      {% endif %}
+
+      <button class="btn btn--inverse">hello</button>
+      
+      {% include author-profile-custom-links.html %}
+    </ul>
+  </div>
+  
   {% if author.avatar %}
     <div class="author__avatar">
       <a href="{{ author.home | default: '/' | absolute_url }}">
@@ -36,18 +39,5 @@
     {% endif %}
   </div>
 
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">메뉴</button>
-    <ul class="author__urls social-icons">
-      {% if author.location %}
-        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">{{ author.location }}</span>
-        </li>
-      {% endif %}
 
-      <button class="btn btn--inverse">hello</button>
-      
-      {% include author-profile-custom-links.html %}
-    </ul>
-  </div>
 </div>
