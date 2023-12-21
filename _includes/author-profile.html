@@ -1,8 +1,21 @@
 {% assign author = page.author | default: page.authors[0] | default: site.author %}
 {% assign author = site.data.authors[author] | default: author %}
+<link rel="stylesheet" type="text/css" href="css/style.css">
 
 <div itemscope itemtype="https://schema.org/Person" class="h-card">
-  <button>hhh</button>
+  <nav role='navigation'>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a>
+      <ul>
+        <li><a href="">Our team</a></li>
+        <li><a href="">History</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Clients</a></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
+</nav>
   {% if author.avatar %}
     <div class="author__avatar">
       <a href="{{ author.home | default: '/' | absolute_url }}">
