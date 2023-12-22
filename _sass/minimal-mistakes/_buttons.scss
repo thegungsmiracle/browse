@@ -9,7 +9,7 @@
   width: auto;
   height: auto;
   padding: 10px 25px;
-  border: 2px solid #000;
+  border: 2px solid #;
   font-family: 'Lato', sans-serif;
   font-weight: 500;
   background: transparent;
@@ -21,7 +21,7 @@
 .btn-10 {
   transition: all 0.3s ease;
   overflow: hidden;
-  color: black;
+  color: white;
 }
 .btn-10:after {
   position: absolute;
@@ -37,10 +37,10 @@
   color: black;
 }
 .btn-10:hover {
-  color: #fff;
+  color: #black;
 }
 .btn-10:hover:after {
-  background: #aaa;
+  background: #white;
   -webkit-transform: scale(1);
   transform: scale(1);
 }
