@@ -21,7 +21,7 @@
 .btn-10 {
   transition: all 0.3s ease;
   overflow: hidden;
-  color: white;
+  color: #fff;
 }
 .btn-10:after {
   position: absolute;
@@ -34,13 +34,13 @@
   transition: all 0.3s ease;
   -webkit-transform: scale(.1);
   transform: scale(.1);
-  color: white;
+  color: black;
 }
 .btn-10:hover {
-  color: #black;
+  color: #000;
 }
 .btn-10:hover:after {
-  background: #black;
+  background: #fff;
   -webkit-transform: scale(1);
   transform: scale(1);
 }
