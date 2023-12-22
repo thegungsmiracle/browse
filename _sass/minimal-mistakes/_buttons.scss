@@ -34,13 +34,13 @@
   transition: all 0.3s ease;
   -webkit-transform: scale(.1);
   transform: scale(.1);
-  color: black;
+  color: white;
 }
 .btn-10:hover {
   color: #black;
 }
 .btn-10:hover:after {
-  background: #white;
+  background: #black;
   -webkit-transform: scale(1);
   transform: scale(1);
 }
